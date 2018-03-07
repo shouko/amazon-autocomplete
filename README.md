@@ -1,7 +1,7 @@
 # Amazon Autocomplete JS Plugin
 AmazonAutocomplete is a vanilla JavaScript plugin to unlock the full power of the Amazon autocompletion engine right into your search input.    
 ## Difference
-This repo fix 2 problem of the original repo.
+This repo fix 4 problem of the original repo.
 * '&' character problem
 > Before
 > ![Before](https://cloud.githubusercontent.com/assets/17195698/25038629/4ef26752-2132-11e7-95b2-0bab56f3436f.png)
@@ -9,6 +9,10 @@ This repo fix 2 problem of the original repo.
 > ![After](https://cloud.githubusercontent.com/assets/17195698/25038663/62a6b780-2132-11e7-99c3-27bf9cfa50c0.png)
 
 * Not necessarily, change the amozon-api call from http to https.   
+
+* Add support for webpack.
+
+* Allow words list panel to be placed in user-designated DOM element
 
 **Demo**: [http://carlosroso.com/amazon-autocomplete](http://carlosroso.com/amazon-autocomplete)
 
@@ -92,6 +96,7 @@ selector | `string` | Yes | CSS selector of the search field.
 delay | `integer` | No | The keyup event on the search field is debounced. This attribute will set the fire rate limit (in milliseconds) on the keyup event callback. Default: `200`
 showWords | `boolean` | No | Enable/disable revealing of the words list panel. Can be useful if you want to show the suggested words on your own custom widget. Default: `true`
 hideOnblur | `boolean` | No | Indicates whether the words list panel should hide when the search field loses focus. Default: `true`
+containerSelector | `string` | No | CSS selector of where the words list panel should be placed in.
 
 ### Events
 Each AmazonAutocomplete instance will fire some events. You can susbscribe to these events to, for example, save the selected word in your DB or to show suggested words in your own widget.
