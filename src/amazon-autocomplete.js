@@ -130,8 +130,12 @@
         container.className = 'ac__container';
         container.style.width = this._input.offsetWidth;
         container.style.position = 'relative';
-        this._input.parentNode.insertBefore(container, this._input.nextSibling);
-        let inner = document.createElement('div');
+        if (typeof this._config.containerSelector === 'undefined') {
+          this._input.parentNode.insertBefore(container, this._input.nextSibling);
+        } else {
+          document.querySelector(this._config.containerSelector).appendChild(container);
+        }
+          let inner = document.createElement('div');
         inner.className = 'ac__inner';
         inner.style.position = 'absolute';
         inner.style.top = 0;
