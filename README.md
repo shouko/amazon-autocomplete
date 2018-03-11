@@ -1,7 +1,7 @@
 # Amazon Autocomplete JS Plugin
 AmazonAutocomplete is a vanilla JavaScript plugin to unlock the full power of the Amazon autocompletion engine right into your search input.    
 ## Difference
-This repo fix 4 problem of the original repo.
+This repo fix 4 problems of the original repo.
 * '&' character problem
 > Before
 > ![Before](https://cloud.githubusercontent.com/assets/17195698/25038629/4ef26752-2132-11e7-95b2-0bab56f3436f.png)
