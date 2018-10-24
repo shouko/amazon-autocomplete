@@ -74,7 +74,7 @@
          * 
          * @param {object} body - The JSON response received from Amazon with the autocompletion suggestions
          */
-        window.AmazonAutocomplete['AmazonJSONPCallbackHandler_'+self._id] = body => {
+        window['AmazonJSONPCallbackHandler_'+self._id] = function(body) {
             if(self._config.showWords){
                 _paintWords.call(self, body[0], body[1]);
             }
@@ -312,7 +312,7 @@
     function _getSuggestions(prefix) {
         let scriptContainer = document.getElementById('ac__script');
         let newScript = document.createElement('script');
-        newScript.src = 'https://completion.amazon.com/search/complete?search-alias=aps&client=amazon-search-ui&mkt=1&q='+prefix+'&callback=AmazonAutocomplete.AmazonJSONPCallbackHandler_'+this._id;
+        newScript.src = 'https://completion.amazon.com/search/complete?search-alias=aps&client=amazon-search-ui&mkt=1&q='+prefix+'&callback=AmazonJSONPCallbackHandler_'+this._id;
         scriptContainer.replaceChild(newScript, scriptContainer.firstChild);
     }
 
